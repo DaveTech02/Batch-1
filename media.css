@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    background-color: gold;
+}
+
+@media (min-width: 300px) {
+    h1{
+        text-align: center;
+        font-size: 6rem;
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (min-width: 600px) {
+    h1{
+        text-align: center;
+        font-size: 8rem;
+        background-color: green;
+        color: white;
+    }
+}
+
+@media (min-width: 900px) {
+    h1{
+        text-align: center;
+        font-size: 10rem;
+        background-color: blue;
+        color: white;
+    }
+}

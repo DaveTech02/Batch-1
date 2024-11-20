@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: none;
+    padding: 10px;
+}
+
+/* img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+} */
+
+.grid-wrapper div { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper div img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.grid-wrapper wide {
+    grid-template-columns: "sidebar";
+    grid-column: span 2;
+}
+
+.grid-wrapper tall {
+    grid-template-columns: "sidebar";
+    grid-row: span 2;
+}
+
+.grid-wrapper big {
+    grid-template-columns: "sidebar";
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media (max-width: px){
+    body{
+        background-color: none;
+        padding: 10px;
+    }
+}
+
+@media (orientation: landscape){
+    .grid-wrapper > div { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid-wrapper > div > img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .grid-wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+    
+    .grid-wrapper wide {
+        grid-template-columns: "sidebar";
+        grid-column: span 2;
+    }
+}
+
+@media (orientation: portrait){
+    .grid-wrapper > div { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid-wrapper > div > img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .grid-wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+    
+    .grid-wrapper wide {
+        grid-template-columns: "sidebar";
+        grid-column: span 2;
+    }
+
+    img:hover{
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+    
+}
